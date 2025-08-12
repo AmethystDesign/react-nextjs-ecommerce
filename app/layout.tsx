@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="adLogoW.png" />
+        <link rel="icon" type="image/png" href="/adLogoW.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-full flex-col bg-white`}
