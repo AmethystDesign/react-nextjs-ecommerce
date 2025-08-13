@@ -41,13 +41,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        {/* Next.js will add it automatically both locally and after deploying to Vercel. */}
-        {/* <link rel="icon" type="image/gif" href={(metadata.icons as { icon: string }).icon} /> */}
-      </head>
+    <html lang="en" suppressHydrationWarning>
+      {/* <head>
+        Next.js will add it automatically both locally and after deploying to Vercel.
+        <link rel="icon" type="image/gif" href={(metadata.icons as { icon: string }).icon} />
+      </head> */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-full flex-col bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-full flex-col bg-white dark:bg-gray-950 dark:text-white dark:antialiased text-gray-900`}
       >
         <Navbar />
         <main className="flex-grow container mx-auto px-4 py-8">

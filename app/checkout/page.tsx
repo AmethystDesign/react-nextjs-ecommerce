@@ -21,7 +21,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 min-h-[80vh]">
       <h1 className="text-3xl font-bold mb-8 text-center">Checkout</h1>
       <Card className="max-w-md mx-auto mb-8">
         <CardHeader>
@@ -64,7 +64,11 @@ export default function CheckoutPage() {
       </Card>
       <form action={checkoutAction} className="max-w-md mx-auto">
         <input type="hidden" name="items" value={JSON.stringify(items)} />
-        <Button type="submit" variant="default" className="w-full">
+        <Button
+          type="submit"
+          variant="default"
+          className="w-full  bg-black dark:bg-gray-400 text-white dark:text-black hover:bg-gray-600 dark:hover:bg-gray-200"
+        >
           Proceed to Payment
         </Button>
       </form>

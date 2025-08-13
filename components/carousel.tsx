@@ -26,7 +26,7 @@ export const Carousel = ({ products }: Props) => {
 
   return (
     // <Card className="relative overflow-hidden rounded-lg shadow-md border-gray-300">
-    <Card className="relative overflow-hidden rounded-lg shadow-md border-gray-300 p-0">
+    <Card className="relative overflow-hidden rounded-lg shadow-md border-gray-300 dark:border-gray-600 p-0">
       {currentProduct.images?.[0] && (
         <div className="relative h-80 w-full">
           <Image

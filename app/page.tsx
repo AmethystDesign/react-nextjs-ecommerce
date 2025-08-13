@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <div>
-      <section className="rounded bg-neutral-100 py-8 sm:py-12">
+      <section className="rounded bg-neutral-100 dark:bg-indigo-950 py-8 sm:py-12">
         <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
           <div className="max-w-md space-y-4">
             <h2 className="text-xl font-bold tracking-tight md:text-2xl">
@@ -21,13 +21,13 @@ export default async function Home() {
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
               AD eCommerce
             </h2>
-            <p className="text-neutral-600">
+            <p className="text-neutral-600 dark:text-neutral-400">
               Discover the latest products at the best prices.
             </p>
             <Button
               asChild
               variant="default"
-              className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-black text-white"
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-black dark:bg-indigo-500  dark:text-black hover:bg-gray-600 dark:hover:bg-indigo-400 transition-colors duration-300"
             >
               <Link
                 href="/products"

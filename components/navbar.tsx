@@ -21,6 +21,13 @@ export const Navbar = () => {
   const { toggleTheme, theme } = useThemeStore();
   const cartCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
+  // Ensure theme is applied after hydration
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    }
+  }, [theme]);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -34,7 +41,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow">
+    <nav className="sticky top-0 z-50 bg-white shadow dark:bg-gray-900 dark:shadow-lg">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link href="/" className="hover:text-blue-600 flex">
           <label>&nbsp;&nbsp;</label>
